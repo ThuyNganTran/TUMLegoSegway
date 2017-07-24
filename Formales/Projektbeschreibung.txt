@@ -1,0 +1,35 @@
+Lego Segway
+
+Budget: 
+- geplant ~500€
+- höchstens 1000€
+
+Tools: 
+- Lego Mindstorms EV3
+- USB WLAN Adapter
+- PC 
+
+Projekt:
+Lego Segway bauen, welches 
+- möglichst stabil sein sollte
+- lenken und vordefinierte Kurven fahren sollte
+
+Fokus liegt auf Funktechnologie (und nicht auf guten Robotern)
+- Projekt soll zeigen, dass Segway auch mit remote control stabil bleibt
+- Segway leitet die Sensordaten über WLAN direkt weiter
+- Komplette Verarbeitung und Steuerung erfolgt auf dem PC
+- Steuersignale (PC -> Segway) über WLAN zurück
+
+
+TODOs:
+- Projektbeschreibung erstellen
+- Benötigte Hardware raussuchen
+
+Some Related Projects:
+https://github.com/cbachhuber/PendulumTestBed (TUM)
+https://github.com/wallstromsimon/LEGO-segway
+https://github.com/laurensvalk/segway
+https://github.com/tedsluis/LEGO-NXT-SEGWAY-NXC
+
+http://robotsquare.com/2014/06/23/tutorial-building-balanc3r/
+http://www.techbricks.nl/My-NXT-projects/nxt-self-balancing-segway-nxtway-robot.html
