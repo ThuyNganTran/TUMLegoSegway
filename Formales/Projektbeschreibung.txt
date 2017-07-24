@@ -33,3 +33,6 @@ https://github.com/tedsluis/LEGO-NXT-SEGWAY-NXC
 
 http://robotsquare.com/2014/06/23/tutorial-building-balanc3r/
 http://www.techbricks.nl/My-NXT-projects/nxt-self-balancing-segway-nxtway-robot.html
+
+Getting Started with the BrickPi:
+https://learn.sparkfun.com/tutorials/getting-started-with-the-brickpi
