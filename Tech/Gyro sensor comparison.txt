@@ -1,0 +1,22 @@
+Gyro, MultiSensitivity Accelerometer and Compass for NXT or EV3
+>> http://www.mindsensors.com/ev3-and-nxt/15-gyro-multisensitivity-accelerometer-and-compass-for-nxt-or-ev3
+
+[$66.95]
+- Gyro, Accelerometer, Compass, and Magnetic Field sensor in one device that can be read all at once
+- Tilt Sensor resolution: 1 degree
+- Compass resolution: 1 degree
+- Accelerometer Resolution: 10 milli-g
+- Tilt Compensated Magnetic Compass
+- Accelerometer sensitivities: 2G, 4G, 8G, 16G
+- Gyro rate of change resolution: 8.75 milli-degrees/sec
+- Current consumption: 2.1 mA at 4.7V
+
+EV3 Gyro Sensor
+>> https://www.intorobotics.com/sensors-lego-mindstorms-ev3-features-comparison/
+
+[$29.99 / €34.99]
+- High accuracy and several axis measurements
+- measure rotational motion and changes in its orientation;
+- +/- 3 degrees accuracy;
+- maximum output of 440 degrees/second;
+- sample rate of 1 kHz;
