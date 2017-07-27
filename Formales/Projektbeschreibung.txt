@@ -5,7 +5,7 @@ Budget:
 - höchstens 1000€
 
 Tools: 
-- Lego Mindstorms EV3
+- Lego Mindstorms EV3 (der aus dem email link enthält keinen gyro)
 - USB WLAN Adapter
 - PC 
 
@@ -24,6 +24,10 @@ Fokus liegt auf Funktechnologie (und nicht auf guten Robotern)
 TODOs:
 - Projektbeschreibung erstellen
 - Benötigte Hardware raussuchen
+
+MindStorms sensors: 
+http://www.mindsensors.com/ev3-and-nxt/17-glidewheel-as-angle-sensor-for-nxt-or-ev3
+
 
 Some Related Projects:
 https://github.com/cbachhuber/PendulumTestBed (TUM)
