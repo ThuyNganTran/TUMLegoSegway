@@ -1,0 +1,59 @@
+\documentclass[NET,a4,12pt,ngerman]{netforms}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tumlang}
+\usepackage{tumcontact}
+\usepackage{scrpage2}
+
+\geometry{%
+	top=10mm,
+	bottom=10mm,
+	left=25mm,
+	right=25mm,
+	headsep=1.5cm,
+	includehead,
+}
+\input{studentdefs}
+
+\pagestyle{scrheadings}
+\chead{\TUMheader{1cm}}
+
+\renewcommand{\maketitle}{%
+	\begin{center}
+		\textbf{Beschreibung des Interdisziplinärem Projekt:}%
+
+		\Large%
+		%TODO ask Sebastian
+		\textbf{Insert title of IDP}%
+	\end{center}
+
+	\footnotesize
+	\vskip4ex
+}
+
+\linespread{1.2}
+\setlength{\parskip}{.5\baselineskip}
+
+\begin{document}
+\maketitle
+
+\subsection*{}
+Der Lego Mindstorms EV3 ist ein beliebtes Robotik-Bauset, das oft genutzt wird, um kleinere Robotikprojekte umzusetzen. Durch die bereitgestellten Lego-Bauteile und der kompatiblen EV3-Steuerungskomponente können Ideen schnell und flexibel ohne großen technischen Aufwand umgesetzt werden. 
+
+Im Rahmen dieses interdisziplinärem Projektes soll ein über WLAN (Wireless Local Area Network) fernsteuerbarer Segway aus Lego gebaut werden. Die definierenden Eigenschaften des Segways sollen in diesem Fall sein, dass er nur über zwei Räder verfügt und auf diesen im Rahmen der Fernsteuerung ohne zusätzlichem Eingriff balancieren kann und damit z.B. auch stabil stehen kann.
+
+Über einen Gyroskop sollen die nötigen Informationen zum Standwinkel des Segways aufgenommen und über WLAN an einen PC übertragen werden, der die Daten verarbeitet und die Steuerungssignale an die Segwaymotoren wieder zurücksendet.  
+Da die Bauform des Segways entscheidend davon abhängt, wie schnell die Kommunikation mit dem PC funktioniert, bietet sich ein Segway auf Lego-Basis an, bei dem Änderungen am Segway selber schnell durchgeführt werden können. 
+
+Um eine optimale Hardwarezusammensetzung zu erreichen, die möglichst gut mit dem PC über WLAN kommunizieren kann sowie mit wenig Einschränkungen programmierbar ist, soll die EV3-Steuerkomponente durch einen Raspberry Pi ersetzt werden, der mithilfe das PiStorm Base Kits zu Lego kompatibel ist. Zudem wird der Lego Mindstorms-eigene Gyrosensor durch das mindsensors Gyroskop ersetzt werden, welches genauere Messwerte liefert. 
+
+\subsection*{Aufgabenverteilung}
+\begin{itemize}
+\item \textbf{Dao Thuy Ngan Tran} - Entwicklung der Steuerungssoftware am PC, Empfang und Verarbeitung der Sensordaten, Berechnung und Senden der Steuersignale
+\item \textbf{Nikita Basargin} - Entwicklung der Hardwarezusammenstellung, Kommunikation mit den Sensoren und Motoren, Empfang und Verarbeitung der Steuersignale
+\end{itemize}
+
+\subsection*{Wahl der Vorlesung}
+Die Vorlesung Mensch-Maschine-Kommunikation 1 deckt die Grundlagen der Human-Machine Interaction, sowie die grundlegende Funktionsweise verschiedener Sensoren ab. Der Themenbereich der Sensoren lässt sich in den  hier beschriebenen Lego Segway integrieren, da dieser durch die Sensordaten mit dem PC kommuniziert. 
+
+\end{document}
