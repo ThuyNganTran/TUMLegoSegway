@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{booktabs}
+\usepackage{graphicx}
 
 
 \usepackage{tumlang}
@@ -436,41 +437,44 @@
 
 
 \subsection*{}
-Der Lego Mindstorms EV3 ist ein beliebtes Robotik-Bauset, das oft genutzt wird um kleinere Robotikprojekte umzusetzen. Durch die bereitgestellten Lego-Bauteile und die kompatible EV3-Steuerungskomponente können Ideen schnell und flexibel ohne großen technischen Aufwand umgesetzt und getestet werden. 
+Der Lego Mindstorms EV3 ist ein beliebtes Robotik-Bauset, das oft genutzt wird um kleinere Robotikprojekte umzusetzen. Durch die bereitgestellten Lego-Bauteile und die kompatible EV3-Steuerungskomponente können Ideen schnell und flexibel ohne großen technischen Aufwand umgesetzt und getestet werden. \\
 
-Im Rahmen dieses interdisziplinären Projektes soll ein über WLAN (Wireless Local Area Network) fernsteuerbarer Segway aus Lego gebaut werden. Die definierenden Eigenschaften des Segways sollen in diesem Fall sein, dass er über genau zwei Räder verfügt und auf diesen im Rahmen der Fernsteuerung ohne zusätzlichen Eingriff balancieren und damit z.B. auch stabil stehen kann.
+Im Rahmen dieses interdisziplinären Projektes soll ein über WLAN (Wireless Local Area Network) fernsteuerbarer Segway aus Lego gebaut werden. Die definierenden Eigenschaften des Segways sollen in diesem Fall sein, dass er über genau zwei Räder verfügt und auf diesen im Rahmen der Fernsteuerung ohne zusätzlichen Eingriff balancieren und damit z.B. auch stabil stehen kann.\\
 
-Über einen Gyroskop (Abbildung \ref{fig:gyro}) sollen die nötigen Informationen zum Standwinkel des Segways aufgenommen und über WLAN an einen PC (Abbildung \ref{fig:pc}) übertragen werden, der die Daten verarbeitet und die Steuerungssignale an die Segwaymotoren wieder zurücksendet. 
+Über einen Gyroskop sollen die nötigen Informationen zum Standwinkel des Segways aufgenommen und über WLAN an einen PC übertragen werden, der die Daten verarbeitet und die Steuerungssignale an die Segwaymotoren wieder zurücksendet. \\
 
-Die Geschwindigkeit der Kommunikation mit dem PC hat einen entscheidenden Einfluss auf die Bauform des Segways. Bei größeren Verzögerungszeiten muss der Segway so gebaut sein, dass der nicht zu schnell aus dem Gleichgewicht kommt. Daher bietet sich ein Segway auf Lego-Basis an, bei dem Änderungen ande der Konstruktion schnell durchgeführt werden können. 
+Die Geschwindigkeit der Kommunikation mit dem PC hat einen entscheidenden Einfluss auf die Bauform des Segways. Bei größeren Verzögerungszeiten muss der Segway so gebaut sein, dass der nicht zu schnell aus dem Gleichgewicht kommt. Daher bietet sich ein Segway auf Lego-Basis an, bei dem Änderungen an der Konstruktion schnell durchgeführt werden können. \\
 
+Um eine optimale Hardwarezusammensetzung zu erreichen, die möglichst gut mit dem PC über WLAN kommunizieren kann sowie mit wenig Einschränkungen programmierbar ist, soll die EV3-Steuerkomponente durch einen Raspberry Pi ersetzt werden. Dieser wird der mithilfe des PiStorms Base Kits mit den Lego Komponenten gekoppelt. Zudem wird der Lego Mindstorms-eigene Gyrosensor durch das Gyroskop von Mindsensors ersetzt, welches genauere Messwerte liefert. \\
 
-\begin{figure}[!b]\hfill
-\minipage{0.36\textwidth}
-  \includegraphics[width=\linewidth]{System-Unit.jpg}
-  \caption{PC, steuert den Segway über WLAN}\label{fig:pc}
-\endminipage\hfill
-\minipage{0.36\textwidth}
-  \includegraphics[width=\linewidth]{RaspberryPi3.jpg}
-  \caption{Raspberry Pi, kommuniziert mit der Hardware}\label{fig:rpi}
-\endminipage\hfill~ \\
+Aus Abbildung \ref{fig:hardware} lässt sich eine bildliche Darstellung des Zusammenspiels der verschiedenen Bestandteile entnehmen. 
 
-~ \hfill
-\minipage{0.36\textwidth}
-  \includegraphics[width=\linewidth]{PiStorms.jpg}
-  \caption{PiStorms, koppelt an Lego Komponenten}\label{fig:storms}
-\endminipage\hfill
-\minipage{0.36\textwidth}
-  \includegraphics[width=\linewidth]{gyro.jpg}
-  \caption{Gyroskop, bestimmt den Neigungswinkel}\label{fig:gyro}
-\endminipage\hfill~
+\begin{figure}
+\begin{align}
+\includegraphics[scale=1.5]{images/Inkscape.png}
+\end{align}
+\caption{Funktionsübersicht der Hardwarebestandteile}\label{fig:hardware}
 \end{figure}
+%\begin{figure}[!b]\hfill
+%\minipage{0.36\textwidth}
+%  \includegraphics[width=\linewidth]{System-Unit.jpg}
+%  \caption{PC, steuert den Segway über WLAN}\label{fig:pc}
+%\endminipage\hfill
+%\minipage{0.36\textwidth}
+%  \includegraphics[width=\linewidth]{RaspberryPi3.jpg}
+%  \caption{Raspberry Pi, kommuniziert mit der Hardware}\label{fig:rpi}
+%\endminipage\hfill~ \\
 
-\newpage
-
-Um eine optimale Hardwarezusammensetzung zu erreichen, die möglichst gut mit dem PC über WLAN kommunizieren kann sowie mit wenig Einschränkungen programmierbar ist, soll die EV3-Steuerkomponente durch einen Raspberry Pi (Abbildung \ref{fig:rpi}) ersetzt werden. Dieser wird der mithilfe des PiStorms Base Kits (Abbildung \ref{fig:storms}) mit den Lego Komponenten gekoppelt. Zudem wird der Lego Mindstorms-eigene Gyrosensor durch das Gyroskop von Mindsensors ersetzt, welches genauere Messwerte liefert. 
-
-
+%~ \hfill
+%\minipage{0.36\textwidth}
+%  \includegraphics[width=\linewidth]{PiStorms.jpg}
+%  \caption{PiStorms, koppelt an Lego Komponenten}\label{fig:storms}
+%\endminipage\hfill
+%\minipage{0.36\textwidth}
+%  \includegraphics[width=\linewidth]{gyro.jpg}
+%  \caption{Gyroskop, bestimmt den Neigungswinkel}\label{fig:gyro}
+%\endminipage\hfill~
+%\end{figure}
 
 
 \subsection*{Aufgabenverteilung}
@@ -480,7 +484,7 @@ Um eine optimale Hardwarezusammensetzung zu erreichen, die möglichst gut mit de
 \end{itemize}
 
 \subsection*{Wahl der Vorlesung}
-Die Vorlesung Mensch-Maschine-Kommunikation 1 deckt die Grundlagen der Human-Machine Interaction, sowie die grundlegende Funktionsweise verschiedener Sensoren ab. Der Themenbereich der Sensoren lässt sich in den hier beschriebenen Lego Segway integrieren, da dieser durch die Sensordaten mit dem PC kommuniziert.
+Die Vorlesung Mensch-Maschine-Kommunikation 1 deckt die Grundlagen von Kommunikationssystemen, Human-Machine-Interaction, sowie die grundlegende Funktionsweise verschiedener Sensoren ab. Der Themenbereich der Sensoren lässt sich in den hier beschriebenen Lego Segway integrieren, da dieser Sensordaten überträgt. Zudem findet eine ständige Kommunikation zwischen dem Segway und dem Computer statt, wofür das Verständnis von Kommunikationssystemen benötigt wird. Durch die manuelle Steuerung des Segways und der Übermittlung von Steuerungssignalen findet Human-Machine-Interaction statt. 
 
 
 \end{document}
