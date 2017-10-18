@@ -1,0 +1,6 @@
+18.10.2017
+- image mit pistorm os auf sd karte
+- ssh verbindung zwischen pistorm und computer aufgebaut
+- motoren angesteuert, python skript ausprobiert
+- sensordaten auf pistorm ausgelesen 
+
