@@ -1,8 +1,9 @@
 18.10.2017
 - image mit pistorm os auf sd karte
-- ssh verbindung zwischen pistorm und computer aufgebaut
+- ssh verbindung zwischen pistorms und computer aufgebaut
 - motoren angesteuert, python skript ausprobiert
-- sensordaten auf pistorm ausgelesen 
+- sensordaten auf pistorms ausgelesen 
+
 
 23.10.2017
 - SSH problems
@@ -15,3 +16,16 @@
 - experiments with PID controller
 - modified prototype
 - python too slow?
+
+
+06.11.2017
+- wifi + ssh setup finally works
+- some benchmarks on sensor reads, motor writes & display print
+
+
+13.11.2017
+- flashed new image (ev3dev)
+- set up wifi + ssh on the new image
+- tested dcompiling ev3dev-lang-cpp demos on the raspberry
+- tested cross compiling ev3dev-lang-cpp demos on ubuntu 
+
