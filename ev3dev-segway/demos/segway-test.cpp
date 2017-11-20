@@ -10,27 +10,28 @@ using namespace ev3dev;
 int main() {
   bool up = false, down = false, left = false, right = false, enter = false, escape = false;
 
-  // new stuff here
-  printf("A: %s\n", OUTPUT_A);
+  // show all port modes for a motor (should be only "tacho-motor")
+  printf("OUTPUT_A : %s\n", OUTPUT_A);
   lego_port port( "pistorms:BAM1" );
-  cout << "BAM1 modes: ";
+  cout << OUTPUT_A << " modes: ";
   for (mode_type m : port.modes()) {        
       cout << m << " "; 
   }
   cout << endl;
 
+  // TODO:
+  // connection to the motor fails, but
+  // motor values are accessible with
+  // $ cat /sys/class/tacho-motor/motor8/position
+  // note: "motor8" can be something else
 
-
-
-  //medium_motor mA = medium_motor(OUTPUT_A);
-  //cout << "m motor A connected: " << (mA.connected()) << endl;
+  port.set_mode( "tacho-motor" ); // doesn't change much
 
   large_motor lA = large_motor(OUTPUT_A);
   cout << "l motor A connected: " << (lA.connected()) << endl;
+  //cout << "address: " << lA.address() << endl;
 
-
-
-
+/*
   while (escape == 0) {
     up = button::up.pressed ();
     down = button::down.pressed ();
@@ -39,13 +40,9 @@ int main() {
     enter = button::enter.pressed ();
     escape = button::back.pressed ();
 
-    printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d banana! 42\n", up, down, left, right, enter, escape);
+    //printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d \n", up, down, left, right, enter, escape);
     usleep (100000);
-
-    // new stuff here
-    //cout << "motor connected: " << (m.connected()) << endl;
-    //cout << "motor position: " << (lA.position()) << endl;
-
   }
+*/
 }
 
