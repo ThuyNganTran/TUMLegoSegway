@@ -39,12 +39,12 @@ int main() {
     enter = button::enter.pressed ();
     escape = button::back.pressed ();
 
-    //printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d banana! 42\n", up, down, left, right, enter, escape);
+    printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d banana! 42\n", up, down, left, right, enter, escape);
     usleep (100000);
 
     // new stuff here
     //cout << "motor connected: " << (m.connected()) << endl;
-    cout << "motor position: " << (lA.position()) << endl;
+    //cout << "motor position: " << (lA.position()) << endl;
 
   }
 }
