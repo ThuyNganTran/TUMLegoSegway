@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <iostream>
 
-#include "ev3dev.h"
+#include "../ev3dev.h"
 
 using namespace std;
 using namespace ev3dev;

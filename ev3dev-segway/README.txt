@@ -10,7 +10,7 @@ Quick steps:
 2. Cross compile the code from the following directory
 	[...] ev3dev-segway/build
 	use (some packages might be required)
-	$ cmake .. -DEV3DEV_PLATFORM=EV3
+	$ cmake .. -DEV3DEV_PLATFORM=PISTORMS
 	$ make
 
 3. Copy executable to the raspberry
