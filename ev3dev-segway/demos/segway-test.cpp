@@ -1,28 +1,34 @@
 #include <unistd.h>
 #include <cstdio>
+#include <iostream>
 
 #include "ev3dev.h"
 
 using namespace std;
 using namespace ev3dev;
 
-int
-main ()
-{
-  bool up = false, down = false, left = false, right = false, enter = false,
-      escape = false;
+int main() {
+  bool up = false, down = false, left = false, right = false, enter = false, escape = false;
 
-  while (escape == 0)
-    {
-      up = button::up.pressed ();
-      down = button::down.pressed ();
-      left = button::left.pressed ();
-      right = button::right.pressed ();
-      enter = button::enter.pressed ();
-      escape = button::back.pressed ();
+  // new stuff here
+  large_motor m = large_motor(OUTPUT_B);
 
-      printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d banana! 42\n", up, down,
-	      left, right, enter, escape);
-      usleep (100000);
-    }
+
+  while (escape == 0) {
+    up = button::up.pressed ();
+    down = button::down.pressed ();
+    left = button::left.pressed ();
+    right = button::right.pressed ();
+    enter = button::enter.pressed ();
+    escape = button::back.pressed ();
+
+    //printf ("up:%d down:%d left:%d right:%d enter:%d esc:%d banana! 42\n", up, down, left, right, enter, escape);
+    usleep (100000);
+
+    // new stuff here
+    //cout << "motor connected: " << (m.connected()) << endl;
+    cout << "motor position: " << (m.position()) << endl;
+
+  }
 }
+
