@@ -206,12 +206,24 @@ bool device::connect(
   struct dirent *dp;
   DIR *dfd;
 
+/*
+  if (pattern == "motor") {
+    cout << "[!!] device connect, dir: " << dir << "; pattern: " <<  pattern << endl; 
+  }
+*/
+
   if ((dfd = opendir(dir.c_str())) != nullptr)
   {
     while ((dp = readdir(dfd)) != nullptr)
     {
       if (strncmp(dp->d_name, pattern.c_str(), pattern_length)==0)
       {
+
+/*
+        if (pattern == "motor") {
+          cout << "[!!]   looking at: " << dp->d_name << endl; 
+        }
+*/
         try
         {
           _path = dir + dp->d_name + '/';
@@ -223,6 +235,16 @@ bool device::connect(
             const auto &matches   = m.second;
             const auto strValue   = get_attr_string(attribute);
 
+/*
+            if (pattern == "motor") {
+              cout << "[!!]      looking at match attribute: " << attribute << endl; 
+              cout << "[!!]      attribute matches: "; 
+              for (auto matches_elm : matches) {
+                  cout << matches_elm << ' ';
+              }
+              cout << endl; 
+            }
+*/
             if (!matches.empty() && !matches.begin()->empty() &&
                 (matches.find(strValue) == matches.end()))
             {
