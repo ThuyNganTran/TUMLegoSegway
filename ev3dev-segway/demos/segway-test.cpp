@@ -10,10 +10,10 @@ using namespace ev3dev;
 int main() {
 
 
-  large_motor lA(OUTPUT_A);
-  large_motor lB(OUTPUT_B);
-  cout << "l motor A connected: " << (lA.connected()) << endl;
-  cout << "l motor B connected: " << (lB.connected()) << endl;
+  motor lA(OUTPUT_A, "lego-nxt-motor");
+  motor lB(OUTPUT_B, "lego-nxt-motor");
+  cout << "motor A connected: " << (lA.connected()) << endl;
+  cout << "motor B connected: " << (lB.connected()) << endl;
 
   lA.set_speed_sp(200);
   lB.set_speed_sp(400);
@@ -21,7 +21,7 @@ int main() {
   lA.run_forever();
   lB.run_forever();
 
-  for (int i = 0; i < 1000; i++) {
+  for (int i = 0; i < 200; i++) {
     int posA = lA.position();
     int posB = lB.position();
     printf( "lA pos: %d, lB pos: %d       \r", posA, posB);

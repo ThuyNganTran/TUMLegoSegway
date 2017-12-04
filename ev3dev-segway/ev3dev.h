@@ -667,7 +667,7 @@ public:
   motor(address_type);
   motor(address_type, const motor_type&);
 
-  static constexpr char motor_large[]  = "lego-nxt-motor"; // "lego-ev3-l-motor"; // [!!]
+  static constexpr char motor_large[]  = "lego-ev3-l-motor";
   static constexpr char motor_medium[] = "lego-ev3-m-motor";
 
   using device::connected;
