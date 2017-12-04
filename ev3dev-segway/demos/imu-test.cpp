@@ -13,7 +13,22 @@ int main( int argc, char* argv[] )
   imu_port.set_mode( "i2c-thru" );
   i2c_sensor imu( "pistorms:BAS2:i2c17", { "ms-absolute-imu" } );
 
+
   printf( "%s\n", (imu.connected() ? "connected" : "not connected") );
+
+  cout << "modes: ";
+  auto modes = imu.modes();
+  for (auto m : modes) {
+    cout << m << ' ';
+  }
+  cout << endl;
+
+  cout << imu.mode()<< endl;
+
+  //imu.set_mode("GYRO"); // requires sudo
+
+  //cout << imu.mode() << endl;
+
 
   while( true )
   {
